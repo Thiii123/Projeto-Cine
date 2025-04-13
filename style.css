@@ -4,74 +4,49 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #111;
+    font-family: 'Poppins', sans-serif;
 }
 
-.fundo {
+.fundo, .fundo-mb {
     width: 100%;
     height: 100%;
     position: absolute;
     z-index: 1;
+    object-fit: cover;
 }
-.fundo-mb{
+.fundo-mb {
     display: none;
 }
+
+/* Menu principal */
 .menu {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
     z-index: 5;
-    font-weight: bold;
-    background: #ffa801 ;
-    /*opacity: 0.6;*/
+    background: #ffa801;
     width: 100%;
-    padding: 10px 0px 30px;
+    padding: 10px 0 30px;
     border-bottom: 2px solid #eeeff3;
+    list-style: none;
 }
-.link1 {
+
+.menu a {
     position: relative;
     display: flex;
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 20px;
+    margin-left: 60px;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.menu a:first-child {
     margin-left: 240px;
-    margin-top: 30px;
-    list-style-type: none;
-    font-family: 'Poppins', sans-serif;
-
 }
-.link1::after {
-    content: ''; 
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s;
-
-}
-
-.link1:hover::after {
-    transform: scaleX(1);
-}
-
-.link2 {
-    position: relative;
-    display: flex;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 60px;
-    margin-top: 30px;
-    list-style-type: none;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-.link2::after {
+.menu a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -81,242 +56,87 @@ body{
     background-color: white;
     transform: scaleX(0);
     transition: transform 0.3s;
-
 }
-
-.link2:hover::after {
+.menu a:hover::after {
     transform: scaleX(1);
 }
 
-.link3 {
-    position: relative;
-    display: flex;
+/* Botões */
+.Entrar, .inscrever {
+    background-color: #1e272e;
+    border-radius: 15px;
+    padding: 10px 20px;
+    border: 2px solid #eeeff3;
+    transition: 0.3s;
+}
+.Entrar:hover, .inscrever:hover {
+    background-color: #ffa801;
+    transform: scale(1.05);
     color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 60px;
-    margin-top: 30px;
-    list-style-type: none;
-    font-family: 'Poppins', sans-serif;
-
 }
-
-.link3::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s;
-
-}
-
-.link3:hover::after {
-    transform: scaleX(1);
-}
-
-
-
-
-.link4 {
-    position: relative;
-    display: flex;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 60px;
-    margin-top: 30px;
-    list-style-type: none;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-.link4::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.3s;
-
-}
-
-.link4:hover::after {
-    transform: scaleX(1);
-}
-
-.link5 {
-    position: relative;
-    display: flex;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 70px;
-    margin-top: 30px;
-    list-style-type: none;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-.link5::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #eeeff3;
-    transform: scaleX(0);
-    transition: transform 0.3s;
-
-}
-
-.link5:hover::after {
-    transform: scaleX(1);
-}
-/*
-.fundo-sub {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: #111;
-    opacity: 0.5;
-}
-*/
 
 .container {
     position: absolute;
     display: flex;
-
     justify-content: center;
+    flex-wrap: wrap;
     z-index: 5;
     width: 80%;
     gap: 20px;
     left: 10%;
     top: 30%;
-    transform: translate(-100%, - 100%);
+    transform: translateY(-50%);
 }
+
 .image-box {
-    
-    width: 90%;
+    width: 20%;
+    display: flex;
     text-align: center;
+    margin-top: 400px;
     overflow: hidden;
     border-radius: 10px;
+    position: relative;
 }
 .image-box img {
-    width: 100%;
+    width: 90%;
     border-radius: 10px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
-.image-box:hover img,
-.image-box:focus-within img {
+.image-box:hover img {
     transform: scale(1.1);
     filter: blur(5px);
 }
 .link-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    font-size: 14px;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: 0.3s ease;
 }
-.image-box:hover .link-img,
-.image-box:focus-within .link-img {
+.image-box:hover .link-img {
     opacity: 1;
 }
 
-.link6{
+.link6 {
     text-decoration: none;
     color: white;
-    padding: 20px 70px;
+    padding: 20px 50px;
     background-color: #1e272e;
     border-radius: 15px;
-    transition: background-color 0.3s ease;
-    transition: transform 0.3s ease;
     font-size: 18px;
     font-weight: bold;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    font-family: 'Poppins', sans-serif;
     border: 2px solid #3d3e41;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+   
 }
-.link6:hover{
+.link6:hover {
     background-color: #ffa801;
-    color: #fff;
-    border: 2px solid #eeeff3;
-    transform: scale(1.05);
-}
-.Entrar{
-
-        position: relative;
-        display: flex;
-        color: white;
-        background-color:   #1e272e;
-        border-radius: 15px;
-        padding: 10px 20px;
-        text-decoration: none;
-        font-size: 20px;
-        margin-left: 70px;
-        margin-top: 20px;
-        list-style-type: none;
-        font-family: 'Poppins', sans-serif;
-        border: 2px solid #eeeff3;
-        transition: background-color 0.3s ease;
-        
-    
-    }
-    .Entrar:hover{
-        background-color: #ffa801;
-        color: #fff;
-        border: 2px solid #eeeff3;
-        transform: scale(1.05);
-
-    }
-  
-
-.inscrever{
-    position: relative;
-    display: flex;
-    background-color: #1e272e;
-    border-radius: 15px;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 70px;
-    margin-top: 20px;
-    list-style-type: none;
-    font-family: 'Poppins', sans-serif;
-    border: 2px solid #eeeff3;
-    transition: background-color 0.3s ease;
-
-}
-.inscrever:hover{
-    background-color: #ffa801;
-    color: #fff;
-    border: 2px solid #eeeff3;
     transform: scale(1.05);
 }
 
-.menu2{
-    display: none;
-}
-
-
+/* Marquee */
 .marquee {
     width: 100%;
     overflow: hidden;
@@ -325,29 +145,65 @@ body{
     z-index: 5; 
     margin-top: 5px;
     margin-left: 10px;
-    top: 0;
-  }
-  
-  .marquee span {
+}
+.marquee span {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 30s linear infinite;
-  }
-  .marquee-text{
+}
+.marquee-text {
     color: white;
     font-size: 20px;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  @keyframes marquee {
-    from {
-      transform: translateX(100%);
+}
+@keyframes marquee {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* Menu Mobile */
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        background: #ffa801;
     }
-    to {
-      transform: translateX(-100%);
+
+    .menu.active {
+        display: flex;
     }
-  }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu a:first-child {
+        margin-left: 0;
+    }
+
+    .container {
+        top: 50%;
+        flex-direction: column;
+    }
+
+    .link6 {
+        padding: 15px 40px;
+    }
+}
+
   
 
 

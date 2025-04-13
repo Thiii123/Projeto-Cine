@@ -8,63 +8,52 @@
 </head>
 <body>
 
-       
     <div class="marquee">
-        <span class="marquee-text">Filmes e Series Atualizados Semanalmente-filmes-Series-Animes</span>
-      </div>
-
-  <header>
-    <ul class="menu">    
-         <li><a class="link1" href="#">Home</a></li>
-        <li><a class="link2" href="#">Filmes</a></li>
-        <li><a class="link3" href="#">Series</a></li>
-        <li><a class="link4" href="#">Animes</a></li>
-        <li><a class="link5" href="#">Suporte</a></li>
-        <li><a class="Entrar" href="#">Entrar</a></li>
-        <li><a class="inscrever" href="#">Inscrever se</a></li>
-    </ul>
-
-    <div class="menu-cell" onclick="toggleMenu()">☰</div>
-    <ul class="menu2" id="menu3">
-        <li><a class="link1" href="#">Home</a></li>
-        <li><a class="link2" href="#">Filmes</a></li>
-        <li><a class="link3" href="#">Series</a></li>
-        <li><a class="link4" href="#">Animes</a></li>
-        <li><a class="link5" href="#">Suporte</a></li>
-        <li><a class="Entrar" href="#">Entrar</a></li>
-        <li><a class="inscrever" href="#">Inscrever-se</a></li>
-    </ul>
-  </header>
-
- 
-  
-
-
-    <img class="fundo-mb" src="/assets/filmes3.jpg" alt="">
-    <img class="fundo" src="/assets/filmes1.jpg" alt="">
-    <div class="fundo-sub"></div>
-    
-    <div class="container">
-        <div class="image-box" tabindex="0">
-            <img src="/assets/solo.jpg" alt="Imagem 1">
-            <div class="link-img"> <a class="link6" href="/index1.html">Assistir</a></div>
-        </div>
-        <div class="image-box" tabindex="0">
-            <img src="/assets/themi.png" alt="Imagem 2">
-            <div class="link-img"> <a class="link6" href="/index2.html">Assistir</a></div>
-        </div>
-        <div class="image-box" tabindex="0">
-            <img src="/assets/therick.jpg" alt="Imagem 3">
-            <div class="link-img"> <a class="link6" href="/index3.html">Assistir</a></div>
-        </div>
-        <div class="image-box" tabindex="0">
-            <img src="/assets/therockie.jpg" alt="Imagem 4">
-            <div class="link-img"> <a class="link6" href="/index4.html">Assistir</a>
+        <span class="marquee-text">Filmes e Séries Atualizados Semanalmente - Filmes - Séries - Animes</span>
     </div>
-</div>
-</div> 
-    
+
+    <!-- Ícone menu mobile -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <header>
+        <ul class="menu" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Séries</a></li>
+            <li><a href="#">Animes</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a class="Entrar" href="#">Entrar</a></li>
+            <li><a class="inscrever" href="#">Inscrever-se</a></li>
+        </ul>
+    </header>
+
+    <img class="fundo-mb" src="/assets/filmes3.jpg" alt="fundo mobile">
+    <img class="fundo" src="/assets/filmes1.jpg" alt="fundo principal">
+
+    <div class="container">
+        <div class="image-box">
+            <img src="/assets/solo.jpg" alt="Solo Leveling">
+            <div class="link-img"><a class="link6" href="/index1.html">Assistir</a></div>
+        </div>
+        <div class="image-box">
+            <img src="/assets/themi.png" alt="The Midnight Gospel">
+            <div class="link-img"><a class="link6" href="/index2.html">Assistir</a></div>
+        </div>
+        <div class="image-box">
+            <img src="/assets/therick.jpg" alt="Rick and Morty">
+            <div class="link-img"><a class="link6" href="/index3.html">Assistir</a></div>
+        </div>
+        <div class="image-box">
+            <img src="/assets/therockie.jpg" alt="The Rookie">
+            <div class="link-img"><a class="link6" href="/index4.html">Assistir</a></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
 
 </body>
-<script src="javasclipt.js"></script>
 </html>
